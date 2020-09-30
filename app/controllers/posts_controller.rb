@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
     def index
-
+        @post = Post.all
     end
 
     def show
@@ -20,6 +20,6 @@ class PostsController < ApplicationController
     end
 
     private def post_params
-        params.require(:post).permit(:title, body)
+        params.require(:post).permit(:title, :body)
     end
 end
